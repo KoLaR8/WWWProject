@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    width: 100%;
+    height: 300px;
+    border: none;
+    background-color: #340358;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, purple, darkblue);
+    text-align: center;
+    justify-content: center;
+}
+
+.header div {
+    min-width: 50%;
+    width: 50%;
+    height: 100px;
+    margin: auto;
+    font-max-size: large;
+    font-min-size: medium;
+    font-size: large;
+    padding: 4%;
+    color:mediumpurple;
+    font-family: Apple Chancery, cursive;
+    text-shadow: 4px 4px darkred;
+}
+
+.menu{
+    width: 100%;
+    background-image: linear-gradient(to right, purple, darkblue);
+    height: 75px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.content{
+    width: 100%;
+    background-color: floralwhite;
+    height: 600px;
+}
+
+.footer{
+    width: 100%;
+    background-image: linear-gradient(to right, purple, darkblue);;
+    height: 20px;
+}
+
+.menu div{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    align-items: center;
+}
+
+
+.menu div:hover{
+    /*background-image: linear-gradient(to left, blueviolet, fuchsia, darkblue);*/
+    cursor: pointer;
+    animation: mymove 3s infinite;
+}
+
+@keyframes mymove {
+    from {background-color: purple}
+    to {background-color: darkblue}
+}
+div a{
+    color: white;
+    margin: auto;
+    text-decoration: none;
+}
+
+.menu li{
+    float: left;
+}
+
+.list{
+    border: 1px solid darkmagenta;
+    border-radius: 15px;
+    display: grid;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    grid-gap: 100px;
+}
