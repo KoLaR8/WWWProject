@@ -11,7 +11,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-image: linear-gradient(to right, purple, darkblue);
+    background-image: linear-gradient(to right, burlywood, chocolate);
     text-align: center;
     justify-content: center;
 }
@@ -25,14 +25,14 @@
     font-min-size: medium;
     font-size: large;
     padding: 4%;
-    color:mediumpurple;
+    color:beige;
     font-family: Apple Chancery, cursive;
-    text-shadow: 4px 4px darkred;
+    text-shadow: 4px 4px firebrick;
 }
 
 .menu{
     width: 100%;
-    background-image: linear-gradient(to right, purple, darkblue);
+    background-image: linear-gradient(to right, burlywood, chocolate);
     height: 75px;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -41,12 +41,13 @@
 .content{
     width: 100%;
     background-color: floralwhite;
-    height: 600px;
+    min-height: 600px;
+    display: inline-block;
 }
 
 .footer{
     width: 100%;
-    background-image: linear-gradient(to right, purple, darkblue);;
+    background-image: linear-gradient(to right, burlywood, chocolate);
     height: 20px;
 }
 
@@ -63,12 +64,12 @@
 .menu div:hover{
     /*background-image: linear-gradient(to left, blueviolet, fuchsia, darkblue);*/
     cursor: pointer;
-    animation: mymove 3s infinite;
+    animation: mymove 3s forwards;
 }
 
 @keyframes mymove {
-    from {background-color: purple}
-    to {background-color: darkblue}
+    from {background-color: burlywood}
+    to {background-color: peru}
 }
 div a{
     color: white;
@@ -81,7 +82,7 @@ div a{
 }
 
 .list{
-    border: 1px solid darkmagenta;
+    border: 1px solid black;
     border-radius: 15px;
     display: grid;
     color: white;
@@ -90,3 +91,84 @@ div a{
     text-decoration: none;
     grid-gap: 100px;
 }
+
+.serviceContainer{
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: 200px 200px 200px 200px;
+    grid-gap: 10px;
+    display:grid;
+    padding: 10px;
+    grid-template-areas:
+        "img1 img1 img2 img2"
+        "img1 img1 img2 img2"
+        "none img3 img3 none"
+        "none img3 img3 none";
+    grid-auto-flow: dense;
+}
+
+.serviceContainer > div{
+    margin: 20px;
+    display: grid;
+    border:solid black 1px;
+    background-color: antiquewhite;
+    color: white;
+    font-size: 34px;
+    opacity: 0.4;
+    border-radius: 25px;
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+}
+
+@keyframes opacityChanging {
+    from {opacity: 0.4}
+    to {opacity: 1.0}
+}
+.serviceContainer > div:hover{
+    animation: opacityChanging 3s forwards;
+}
+#img1{
+    background-image: url("naprawa.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-area: img1;
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+#img2{
+    background-image: url("strojenie.jpg");
+    background-size: cover;
+    background-position: center;
+
+    grid-area: img2;
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+#img3{
+    background-image: url("Lutnictwo.jpg");
+    background-size: cover;
+    background-position: center;
+
+    grid-area: img3;
+    grid-row: span 2;
+    grid-column: span 2;
+}
+#none{
+    visibility: hidden;
+}
+
+.serviceText{
+    margin: auto;
+}
+
+/*.img3{*/
+/*    grid-area: img3;*/
+/*}*/
+
+/*.none{*/
+/*    grid-area: none;*/
+/*}*/
