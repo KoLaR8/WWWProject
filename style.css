@@ -165,10 +165,106 @@ div a{
     margin: auto;
 }
 
-/*.img3{*/
-/*    grid-area: img3;*/
+/*.productsContainer{*/
+/*    grid-template-columns: repeat(4, auto);*/
+/*    grid-template-rows: 200px;*/
+/*    grid-gap: 30px;*/
+/*    display:grid;*/
+/*    padding: 10px;*/
+/*    grid-template-areas:*/
+/*    "column1 column2 column3 column4"*/
+/*    "content1 content2 content3 content4";*/
+/*    grid-auto-flow: dense;*/
+
+
 /*}*/
 
-/*.none{*/
-/*    grid-area: none;*/
-/*}*/
+.contentP >div{
+    margin: 20px;
+    display: grid;
+    border:solid black 1px;
+    background-color: antiquewhite;
+    color: white;
+    font-size: 34px;
+    opacity: 0.4;
+    border-radius: 25px;
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+}
+
+#column1{
+    grid-area: column1;
+    background-image: url("struny.jpg");
+
+}
+
+#column2{
+    grid-area: column2;
+    background-image: url("paleczki.jpg");
+}
+
+#column3{
+    background-image: url("trabki.jpg");
+    grid-area: column3;
+}
+
+#column4{
+    background-image: url("kostka.jpg");
+    grid-area: column4;
+}
+
+
+.productsText{
+    user-select: none;
+    margin: auto;
+}
+
+
+#column1Content{
+    visibility: hidden;
+    grid-area: content1;
+}
+#column2Content{
+    visibility: hidden;
+    grid-area: content2;
+}
+#column3Content{
+    visibility: hidden;
+    grid-area: content3;
+}
+#column4Content{
+    visibility: hidden;
+    grid-area: content4;
+}
+.notVisibleUntilClickOnColumn{
+    text-align: center;
+    color: black;
+}
+
+#column1Content, #column2Content, #column3Content, #column4Content{
+    color: black;
+    text-shadow: none;
+    opacity: 1.0;
+}
+.contentP{
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: 200px;
+    grid-gap: 30px;
+    display:grid;
+    padding: 10px;
+    grid-template-areas:
+    "column1 column2 column3 column4"
+    "content1 content2 content3 content4";
+    grid-auto-flow: dense;
+
+}
+.categories{
+    background-size: cover;
+}
+.categories:hover{
+    cursor: pointer;
+    animation: opacityChanging 1s forwards;
+}
