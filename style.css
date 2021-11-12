@@ -40,15 +40,17 @@
 
 .content{
     width: 100%;
-    background-color: floralwhite;
+    background-color:  blanchedalmond;
     min-height: 600px;
     display: inline-block;
 }
 
 .footer{
+    display: inline-block;
     width: 100%;
     background-image: linear-gradient(to right, burlywood, chocolate);
-    height: 20px;
+    height:auto;
+    min-height: 30px;
 }
 
 .menu div{
@@ -242,6 +244,7 @@ div a{
 .notVisibleUntilClickOnColumn{
     text-align: center;
     color: black;
+    background-image: linear-gradient(to right, burlywood, chocolate);
 }
 
 #column1Content, #column2Content, #column3Content, #column4Content{
@@ -251,6 +254,7 @@ div a{
 }
 .contentP{
     grid-template-columns: repeat(4, auto);
+    background-color:  blanchedalmond;
     grid-template-rows: 200px;
     grid-gap: 30px;
     display:grid;
@@ -260,11 +264,150 @@ div a{
     "content1 content2 content3 content4";
     grid-auto-flow: dense;
 
+
 }
 .categories{
     background-size: cover;
+    user-select: none;
 }
 .categories:hover{
     cursor: pointer;
     animation: opacityChanging 1s forwards;
+}
+
+.contactContent{
+    grid-template-columns: repeat(2, auto);
+    background-color:  blanchedalmond;
+    grid-template-rows: auto;
+    margin: 100px;
+    grid-gap: 30px;
+    display:grid;
+    padding: 30px;
+    grid-template-areas:
+    "column1 column2";
+    grid-auto-flow: dense;
+
+    text-align: center;
+    font-size: 24px;
+}
+
+.contactText{
+    padding: 60px;
+    grid-area: column1;
+    border:solid 1px black;
+    border-radius: 25px;
+    text-align: center;
+    color: black;
+    background-image: linear-gradient(to right, burlywood, chocolate);
+}
+
+.contactInfo{
+    color: black;
+    padding: 60px;
+    grid-area: column2;
+    border:solid 1px black;
+    border-radius: 25px;
+    background: linear-gradient(to right, burlywood, chocolate);
+    float: bottom;
+}
+.arrowDown {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    top: 50%;
+    width: 3vmin;
+    height: 3vmin;
+    background: transparent;
+    border-top: 1vmin solid orangered;
+    border-right: 1vmin solid orangered;
+    box-shadow: 0 0 0 lightgray;
+    transition: all 200ms ease;
+    transform: translate3d(0,-50%,0) rotate(135deg);
+    cursor: pointer;
+}
+
+.arrowDown:hover{
+    border-color: black;
+    box-shadow: 0.5vmin -0.5vmin 0 orangered    ;
+    float: none;
+}
+
+.boxForArrow{
+    width: 100%;
+    height: 30px;
+}
+
+#formBox{
+    background: linear-gradient(to right, bisque, burlywood, peru);
+    border: solid 1px black;
+    border-radius: 25px;
+    padding: 25px;
+    width: 60%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    visibility: visible;
+    color: black;
+    font-family: Apple Chancery, cursive;
+    min-width: 60%;
+    box-sizing: border-box;
+}
+
+.col-25{
+    margin-left: 1%;
+    width: 24%;
+    float: left;
+}
+
+.col-75{
+    width: 74%  ;
+    float: left;
+    margin-right: 1%;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    resize: vertical;
+}
+
+
+textarea{
+    height: 200px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+#ContactFormSubmitButton{
+    width: 75%;
+    color: white;
+    border-radius: 15px;
+    background-color: #333333;
+    margin-left: 25%;
+
+}
+
+#ContactFormSubmitButton:hover{
+    animation: mymove 1s forwards;
+    cursor: pointer;
 }

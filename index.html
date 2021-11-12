@@ -1,25 +1,80 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>MusiCon - Kontakt</title>
     <link rel="stylesheet" href="style.css"/>
+
 </head>
 <body>
     <div class = "header">
         <div><h1>SKLEP MUZYCZNY <br> MusiCon</h1></div>
     </div>
     <div class = "menu">
-            <div class = "list" onclick="location.href='index.html'">HOME</div>
+            <div class = "list" onclick="location.href='index.html'">KONTAKT</div>
             <div class = "list" onclick="location.href='Services.html'">USŁUGI</div>
             <div class = "list" onclick="location.href='Products.html'"><a href="Products.html">NASZE PRODUKTY</a></div>
     </div>
     <div class = "content">
-
+        <div class = "contactContent">
+            <div class="contactText">
+                Chcesz wymienić instrument na nowy? Chcesz zacząć swoją przygodę z muzyką? Chcesz sprawić komuś prezent? <br>
+                Jeśli tak to trafiłeś w dobre miejsce! Nasze sklepy są wyposażone w instrumenty wielu producentów.<br>
+                Znajdzie się coś zarówno dla początkującego muzyka jak i dla profesjonalisty. <br>
+                A nasi pracownicy z chęcią pomogą znaleźć to czego potrzebujesz.<br>
+                Nie możesz znaleźć tej jednej gitary o oryginalnym wyglądzie i wyjątkowym brzmieniu? <b>Nie ma problemu, zamówimy ją dla Ciebie!</b> <br>
+                Zajmujemy się nie tylko sprzedażą instrumentów, sprawdź nasze <a href="Services.html">Usługi</a>!
+            </div>
+            <div class = "contactInfo">
+                <h4 >Godziny otwarcia naszych sklepów</h4><br>
+                Pn-Pt: 10-19<br>
+                Sob-Nd: 11-16<br>
+                <b>Telefon</b>:<br>
+                (+48) 123 123 321<br>
+            </div>
+        </div>
+        <div class="boxForArrow">
+            <div class = "arrowDown" onclick="showHiddenForm()"></div>
+        </div>
     </div>
     <div class = "footer">
-
+        <template id = "hiddenForm">
+            <div id = "formBox">
+                <form>
+                    <div class ="row">
+                            <label>Napisz do nas!</label>
+                    </div>
+                    <div class ="row">
+                        <div class ="col-25">
+                            <label for="about">Temat:</label>
+                        </div>
+                        <div class ="col-75">
+                            <input type="text" id="about">
+                        </div>
+                    </div>
+                    <div class ="row">
+                        <div class ="col-25">
+                            <label for="mail">e-mail:</label>
+                        </div>
+                        <div class ="col-75">
+                            <input type ="text"  id="mail" placeholder="jan.kowalski@poczta.pl">
+                        </div>
+                    </div>
+                    <div class ="row">
+                        <div class ="col-25">
+                            <label for="msg">wiadomość: </label>
+                        </div>
+                        <div class ="col-75">
+                            <textarea placeholder="Tu jest miejsce na twoją wiadomość!... " id = "msg"></textarea>
+                        </div>
+                    </div>
+                    <div class ="row">
+                        <input type="submit" value="Wyślij" id="ContactFormSubmitButton">
+                    </div>
+                </form>
+            </div>
+        </template>
     </div>
-
 </body>
+<script type="text/javascript" src="ContactFormClick.js"></script>
 </html>
