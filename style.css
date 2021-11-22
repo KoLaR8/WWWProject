@@ -2,6 +2,16 @@
     margin: 0;
     padding: 0;
 }
+body, html {
+    height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    {
+        width: 100%;
+        margin-top: 0;
+    }
+}
 
 .header{
     width: 100%;
@@ -50,7 +60,7 @@
     width: 100%;
     background-image: linear-gradient(to right, burlywood, chocolate);
     height:auto;
-    min-height: 30px;
+    min-height: 50px;
 }
 
 .menu div{
@@ -108,6 +118,34 @@ div a{
     grid-auto-flow: dense;
 }
 
+@media screen and (max-width: 1000px) {
+    .serviceContainer{
+        grid-template-rows: 200px 200px 200px 200px 1px 200px 200px;
+        grid-template-columns: repeat(1, auto);
+        grid-template-areas:
+        "img1 img1"
+        "img1 img1"
+        "img2 img2"
+        "img2 img2"
+        "img3 img3"
+        "img3 img3"
+        "none none"
+        "none none";
+        font-size: xxx-large;
+
+    }
+    .serviceText{
+        font-size: xxx-large;
+    }
+    #none{
+        height: 10px;
+    }
+
+    .header div {
+        font-size: x-large;
+    }
+}
+
 .serviceContainer > div{
     margin: 20px;
     display: grid;
@@ -160,7 +198,14 @@ div a{
     grid-column: span 2;
 }
 #none{
+    margin: 0;
+    padding: 0;
     visibility: hidden;
+}
+@media screen and (max-width: 1000px) {
+    #formBox {
+        font-size: x-large;
+    }
 }
 
 .serviceText{
@@ -242,9 +287,11 @@ div a{
     grid-area: content4;
 }
 .notVisibleUntilClickOnColumn{
+    height: 10px;
     text-align: center;
     color: black;
     background-image: linear-gradient(to right, burlywood, chocolate);
+    position: relative;
 }
 
 #column1Content, #column2Content, #column3Content, #column4Content{
@@ -255,7 +302,7 @@ div a{
 .contentP{
     grid-template-columns: repeat(4, auto);
     background-color:  blanchedalmond;
-    grid-template-rows: 200px;
+    grid-template-rows: 200px auto;
     grid-gap: 30px;
     display:grid;
     padding: 10px;
@@ -265,6 +312,57 @@ div a{
     grid-auto-flow: dense;
 
 
+}
+
+@media screen and (max-width: 1200px) {
+    .contentP{
+        height: auto;
+        font-size: large;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: 200px auto 200px 300px;
+        grid-template-areas:
+        "column1 column2"
+        "content1 content2"
+        "column3 column4"
+        "content3 content4";
+
+    }
+    .menu{
+        font-size: xx-large;
+        width: 100%;
+        background-image: linear-gradient(to right, burlywood, chocolate);
+        height: 75px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    #foot{
+        height: 10%;
+    }
+}
+
+#foot{
+    height: 40%;
+}
+@media screen and (max-width: 1000px) {
+    .contentP{
+        font-size: xx-large;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: 300px auto 300px auto 300px auto 300px 300px;
+        grid-template-areas:
+        "column1"
+        "content1"
+        "column2"
+        "content2"
+        "column3"
+        "content3"
+        "column4"
+        "content4";
+    }
+
+    #foot{
+        height: 10%;
+    }
 }
 .categories{
     background-size: cover;
@@ -310,6 +408,26 @@ div a{
     background: linear-gradient(to right, burlywood, chocolate);
     float: bottom;
 }
+@media screen and (max-width: 1200px) {
+    .contactContent{
+        font-size: x-large;
+        grid-template-columns: repeat(1, auto);
+        grid-template-areas:
+        "column1"
+        "column2";
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .contactContent{
+        font-size: xxx-large;
+        grid-template-columns: repeat(1, auto);
+        grid-template-areas:
+        "column1"
+        "column2";
+    }
+}
+
 .arrowDown {
     display: block;
     margin-right: auto;
@@ -361,9 +479,9 @@ div a{
 }
 
 .col-75{
-    width: 74%  ;
+    width: 71%  ;
     float: left;
-    margin-right: 1%;
+    margin-right: 3%;
 }
 
 label {
@@ -391,11 +509,34 @@ textarea{
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
     .col-25, .col-75, input[type=submit] {
-        width: 100%;
+        margin-right: 2%;
+        margin-left: 2%;
+        width: 96%;
         margin-top: 0;
     }
+
+    ::placeholder{
+        color: black;
+        opacity: 0.6;
+        font-size: xx-large;
+    }
+
+    input[type="text"]
+    {
+        font-size: xx-large;
+    }
+    textarea
+    {
+        font-size: xxx-large;
+    }
+
+    #ContactFormSubmitButton{
+        height: 80px;
+        font-size: x-large;
+    }
+
 }
 
 #ContactFormSubmitButton{
